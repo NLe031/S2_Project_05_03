@@ -15,6 +15,7 @@
 
 
 /* Article Styles */
+/* Styles the entire article to float left and designs the width. */
 article {
     float: left;
     width: 384px;
@@ -22,6 +23,7 @@ article {
 
 
 /* First Line and Drop Cap Styles */
+/* Changes the first letter of the first paragraph to be bigger and makes the font size of the first sentence larger. */
 article p:first-of-type::first-line {
     font-size: 1.25em;
 }
@@ -38,6 +40,7 @@ article p:first-of-type::first-letter {
 
 
 /* Aside Styles */
+/* Floats the aside to the left */
 aside {
     width: 768px;
     float: left;
@@ -46,6 +49,7 @@ aside {
 
 
 /* Map Styles */
+/* Displays the map and keeps it in place */
 div#battleMap {
     width: 688px;
     margin: 20px auto;
@@ -59,6 +63,7 @@ div#battleMap {
 
 
 /* Interactive Map Styles */
+/* Moves markers to their position on the map */
 a.battleMarkers {
     position: absolute;
 }
@@ -94,4 +99,11 @@ a.battleMarkers {
 }
 
 /* Map Information Styles */
-div.mapInfo {}
+/* Displays info when hovering on the markers on the map */
+div.mapInfo {
+    display: none;
+}
+
+a.battleMarkers:hover+div.mapInfo {
+    display: block;
+}
